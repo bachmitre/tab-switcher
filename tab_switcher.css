@@ -1,0 +1,66 @@
+/* Basic styling for the tab switcher popup */
+body {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    margin: 0;
+    min-width: 200px;
+    max-width: 600px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 1.2em;
+    /* Plain no border or window, make as if floating */
+    border: none;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li:hover {
+    background-color: #e9ecef;
+}
+
+.selected {
+    background-color: #95bde7 !important;
+    color: black;
+}
+
+img {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+
+span {
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Alternating background colors for rows */
+li:nth-child(odd) {
+    background-color: #f1f1f1;
+}
+
+li:nth-child(even) {
+    background-color: #ffffff;
+}
